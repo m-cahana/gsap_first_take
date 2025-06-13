@@ -47,6 +47,6 @@ const main = gsap.timeline({
 });
 Svgs.forEach((svg) => {
   main.to(svg, {
-    opacity: 0.8,
+    opacity: 1,
   });
 });

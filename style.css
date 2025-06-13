@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@800&family=Staatliches&display=swap");
+
+/* Thanks to JHEY // @jh3yy */
+html {
+  scroll-snap-type: y proximity;
+}
+
+li {
+  scroll-snap-align: center;
+  padding-left: 0.2em;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+
+.spacer {
+  color: #2d2d3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf3fa;
+  margin-bottom: 80px;
+  font-size: 40px;
+}
+
+li {
+  /* IMPORTANT FOR THE SNAPPING */
+  scroll-snap-align: center;
+  padding-left: 0.2em;
+}
+
+li > span {
+  display: inline-block;
+}
+
+.cols2 {
+  padding-left: 20px;
+  display: flex;
+  /* outline:1px solid green; */
+}
+
+.cols2:first-child {
+  margin-bottom: 100px;
+}
+
+h1,
+ul,
+li {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  font-size: clamp(30px, 8vw, 60px);
+}
+
+h1 {
+  /* background:#c6e6ff; */
+  flex-grow: 0;
+  align-self: flex-start;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  /* outline: 1px solid blue; */
+}
+
+ul,
+h1,
+li {
+  margin: 0;
+  line-height: 1;
+}
+
+body {
+  &:before,
+  &:after {
+    content: "";
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #fff 10%, rgba(255, 255, 255, 0));
+  }
+  &:after {
+    top: auto;
+    bottom: 0;
+    background: linear-gradient(to top, #fff 50%, rgba(255, 255, 255, 0));
+  }
+}
+
+.scroll {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  padding-top: 100px;
+
+  span {
+    display: block;
+  }
+
+  svg {
+    margin-top: 10px;
+    width: 18px;
+    height: 18px;
+    animation: scroll 0.95s ease-in-out alternate infinite;
+    fill: none;
+    stroke: #000000;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 1;
+  }
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 40%;
+  opacity: 0;
+  margin: -19px auto;
+  transition: transform 1s cubic-bezier(0.14, 0.15, 0.13, 0.99);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.main {
+  margin-top: 600px;
+  width: 100%;
+  padding-left: 20px;
+  align-self: flex-start;
+}
+
+.name {
+  font-size: clamp(5vw, 6vw, 3rem);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-weight: 700;
+}

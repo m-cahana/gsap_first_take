@@ -10,7 +10,7 @@ Making some circles noise
 const simplex = new SimplexNoise();
 for (let i = 0; i < 5000; i++) {
   const svg = document.createElement("img");
-  svg.src = "svgs/silver_groups.svg";
+  svg.src = "svgs/mess.png";
   svg.classList.add("svg");
   const n1 = simplex.noise2D(i * 0.003, i * 0.0033);
   const n2 = simplex.noise2D(i * 0.002, i * 0.001);

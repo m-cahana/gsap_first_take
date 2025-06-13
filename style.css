@@ -125,11 +125,11 @@ body {
 }
 
 .svg {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 40%;
   opacity: 0;
-  margin: -19px auto;
+  margin: -29px auto;
   transition: transform 1s cubic-bezier(0.14, 0.15, 0.13, 0.99);
   /*  add this to make the image a block element (so it behaves like a div) */
   display: block;
